@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wodzik: klawiatura ekranowa dla Windows 11</title>
+<meta name="description" content="Klawiatura ekranowa dla Windows 11 obsługiwana myszką: klikanie, swipe i T9, podpowiedzi po polsku i angielsku. Wszystko offline.">
+<meta name="theme-color" content="#e2e9f2" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#14181e" media="(prefers-color-scheme: dark)">
+<meta property="og:title" content="Wodzik: pisz myszką. Szybko.">
+<meta property="og:description" content="Klawiatura ekranowa dla Windows 11: klikanie, swipe i T9, podpowiedzi po polsku i angielsku. Wszystko offline.">
+<meta property="og:image" content="https://adzikg.github.io/wodzik-site/zrzuty/mist-00-hero.png">
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css">
+<script src="main.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#tresc">Przejdź do treści</a>
+
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="brand" href="#tresc" aria-label="Wodzik, początek strony">
+      <img src="logo.svg" alt="" width="32" height="32">Wodzik <span class="badge">v0.4</span>
+    </a>
+    <nav class="nav" id="menu" aria-label="Sekcje strony">
+      <a href="#funkcje">Funkcje</a>
+      <a href="#sposoby">Swipe i T9</a>
+      <a href="#skroty">Skróty</a>
+      <a href="#kod">Programowanie</a>
+      <a href="#prywatnosc">Prywatność</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <div class="top-actions">
+      <a class="btn btn-primary btn-small" href="#kontakt">Kontakt</a>
+      <button class="menu-btn" type="button" aria-controls="menu" aria-expanded="false" aria-label="Menu">
+        <svg class="icon when-closed" aria-hidden="true"><use href="icons.svg#menu"/></svg>
+        <svg class="icon when-open" aria-hidden="true"><use href="icons.svg#x"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="tresc">
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <span class="news">Nowa wersja 0.4 dla Windows 11</span>
+      <h1>Pisz myszką.<br><span>Szybko.</span></h1>
+      <p>Klawiatura ekranowa dla Windows 11: klikanie, swipe i T9, podpowiedzi po polsku i angielsku. Wszystko offline.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#kontakt"><svg class="icon" aria-hidden="true"><use href="icons.svg#mail"/></svg>Napisz do mnie</a>
+        <a class="btn btn-ghost" href="#funkcje"><svg class="icon" aria-hidden="true"><use href="icons.svg#sparkles"/></svg>Zobacz, co potrafi</a>
+      </div>
+      <ul class="pills">
+        <li><svg class="icon" aria-hidden="true"><use href="icons.svg#check"/></svg>Bezpłatna</li>
+        <li><svg class="icon" aria-hidden="true"><use href="icons.svg#ban"/></svg>Bez reklam</li>
+        <li><svg class="icon" aria-hidden="true"><use href="icons.svg#wifi-off"/></svg>Działa offline</li>
+      </ul>
+    </div>
+    <div class="shot">
+      <picture>
+        <source srcset="zrzuty/graphite-00-hero.png" media="(prefers-color-scheme: dark)">
+        <img src="zrzuty/mist-00-hero.png" width="2000" height="680" fetchpriority="high"
+             alt="Okno Wodzika: klawisze QWERTY, wpisane „dzień dobry” i podpowiedzi następnego słowa: proszę, panie, pani, wieczór.">
+      </picture>
+      <svg class="trail" viewBox="0 0 1000 340" fill="none" aria-hidden="true">
+        <defs>
+          <linearGradient id="trail-colour" x1="0%" x2="100%" y1="60%" y2="30%">
+            <stop offset="0%" stop-color="#485ccc"/><stop offset="50%" stop-color="#3ec9bd"/><stop offset="100%" stop-color="#72f4e7"/>
+          </linearGradient>
+          <filter id="trail-glow" x="-30%" y="-30%" width="160%" height="160%">
+            <feGaussianBlur stdDeviation="5" result="a"/><feGaussianBlur stdDeviation="12" result="b"/>
+            <feMerge><feMergeNode in="b"/><feMergeNode in="a"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+        </defs>
+        <path pathLength="1" d="M -30 262 C 120 290, 240 215, 390 205 C 540 195, 620 170, 750 145 C 880 120, 960 70, 1080 30"
+              stroke="url(#trail-colour)" stroke-width="4.5" stroke-linecap="round" filter="url(#trail-glow)"/>
+        <path pathLength="1" d="M -30 262 C 120 290, 240 215, 390 205 C 540 195, 620 170, 750 145 C 880 120, 960 70, 1080 30"
+              stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" opacity="0.85"/>
+        <circle cx="750" cy="145" r="7" fill="#72f4e7" opacity="0.6"/>
+        <circle cx="750" cy="145" r="4" fill="#ffffff"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" aria-label="Wodzik w liczbach">
+  <ul class="stats">
+    <li class="cap press"><span class="label">Trafność</span><strong>90%</strong><span>słów ze swipe'a trafionych za pierwszym razem</span></li>
+    <li class="cap press"><span class="label">Szybkość</span><strong>~12 ms</strong><span>na rozpoznanie gestu</span></li>
+    <li class="cap press"><span class="label">Start</span><strong>1,4 s</strong><span>od uruchomienia do pisania</span></li>
+    <li class="cap press"><span class="label">Prywatność</span><strong>0</strong><span>połączeń z siecią</span></li>
+  </ul>
+</section>
+
+<section class="section" id="funkcje">
+  <div class="wrap">
+    <div class="head">
+      <span class="label label-pill">Funkcje</span>
+      <h2>Stworzona do pisania myszką</h2>
+      <p>Każda funkcja Wodzika jest po to, żeby klikać mniej i pisać szybciej.</p>
+    </div>
+    <div class="grid4">
+      <article class="card cap press">
+        <div class="ico"><svg class="icon" aria-hidden="true"><use href="icons.svg#spline"/></svg></div>
+        <h3>Swipe</h3>
+        <p>Przeciągnij po literach z wciśniętym przyciskiem myszy: całe słowo jednym ruchem.</p>
+        <div class="foot">Inne odczyty gestu w pasku</div>
+      </article>
+      <article class="card cap press">
+        <div class="ico teal"><svg class="icon" aria-hidden="true"><use href="icons.svg#grid-3x3"/></svg></div>
+        <h3>T9</h3>
+        <p>Dziewięć dużych pól: mniej celowania, a Wodzik sam zgaduje słowo. Swipe też działa.</p>
+        <div class="foot">abc · def · ghi</div>
+      </article>
+      <article class="card cap press">
+        <div class="ico"><svg class="icon" aria-hidden="true"><use href="icons.svg#sparkles"/></svg></div>
+        <h3>Podpowiedzi PL i EN</h3>
+        <p>Do 15 słów w pasku: dokończenie wyrazu i propozycje następnego słowa.</p>
+        <div class="foot"><span class="chip">termin</span><span class="chip">proszę</span></div>
+      </article>
+      <article class="card cap press">
+        <div class="ico">ą/ę</div>
+        <h3>Polskie znaki</h3>
+        <p>Przytrzymaj klawisz albo kliknij go prawym przyciskiem. Spacja sama uzupełnia ogonki.</p>
+        <div class="foot"><span class="chip">a → ą</span><span class="chip">pozno → późno</span></div>
+      </article>
+      <article class="card cap press">
+        <div class="ico"><svg class="icon" aria-hidden="true"><use href="icons.svg#space"/></svg></div>
+        <h3>Gesty na spacji</h3>
+        <p>Przeciągnij ze spacji w lewo, żeby kasować (dalej: całe słowa), w prawo, żeby wysłać Enter.</p>
+        <div class="foot">← ⌫ · Enter ↵ →</div>
+      </article>
+      <article class="card cap press">
+        <div class="ico teal"><svg class="icon" aria-hidden="true"><use href="icons.svg#smile"/></svg></div>
+        <h3>Emoji po polsku</h3>
+        <p>Wpisz „serce”, „kawa” albo „brawo”, a pasek podsunie pasujące emoji.</p>
+        <div class="foot"><span class="emoji" aria-hidden="true">❤️☕👏</span></div>
+      </article>
+      <article class="card cap press">
+        <div class="ico"><svg class="icon" aria-hidden="true"><use href="icons.svg#clipboard-paste"/></svg></div>
+        <h3>Schowek pod ręką</h3>
+        <p>Po skopiowaniu pasek pokazuje początek tekstu, a jedno kliknięcie wkleja go bez formatowania. Działa też z obrazami.</p>
+        <div class="foot">Wklej: „Dzień dobry…”</div>
+      </article>
+      <article class="card cap press">
+        <div class="ico teal"><svg class="icon" aria-hidden="true"><use href="icons.svg#book-plus"/></svg></div>
+        <h3>Uczy się Ciebie</h3>
+        <p>Zapamiętuje Twoje słowa i to, co zwykle piszesz po czym. Wszystko zostaje na Twoim komputerze.</p>
+        <div class="foot teal"><svg class="icon" aria-hidden="true"><use href="icons.svg#lock"/></svg>Bez chmury</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="sposoby">
+  <div class="wrap">
+    <div class="head">
+      <span class="label label-pill">Tryby</span>
+      <h2>Trzy sposoby pisania</h2>
+      <p>Przełączasz je jednym kliknięciem na górnym pasku klawiatury.</p>
+      <div class="tabs" role="tablist" aria-label="Tryb pisania">
+        <button type="button" role="tab" id="tab-qwerty" aria-controls="mode-qwerty" aria-selected="true">QWERTY</button>
+        <button type="button" role="tab" id="tab-t9" aria-controls="mode-t9" aria-selected="false" tabindex="-1">T9</button>
+        <button type="button" role="tab" id="tab-kod" aria-controls="mode-kod" aria-selected="false" tabindex="-1">&lt;/&gt;</button>
+      </div>
+    </div>
+    <div class="deck">
+      <div role="tabpanel" id="mode-qwerty" aria-labelledby="tab-qwerty">
+        <div class="mode-head">
+          <div>
+            <span class="label">Litery + swipe</span>
+            <h3>Klasyczny układ z podpowiedziami</h3>
+            <p>Klikaj albo przeciągaj po literach. Polski słownik ma około 350 tysięcy słów, a podpowiedzi biorą pod uwagę poprzednie słowa.</p>
+          </div>
+          <div class="chips"><span>Słownik PL i EN</span><span>Następne słowo</span></div>
+        </div>
+        <div class="frame">
+          <picture>
+            <source srcset="zrzuty/graphite-02-swipe.png" media="(prefers-color-scheme: dark)">
+            <img src="zrzuty/mist-02-swipe.png" width="2000" height="680" loading="lazy"
+                 alt="Ślad gestu swipe przez litery słowa „dziękuję”; w pasku inne odczyty gestu: dziękuje, dziele, dzielę.">
+          </picture>
+        </div>
+      </div>
+      <div role="tabpanel" id="mode-t9" aria-labelledby="tab-t9" hidden>
+        <div class="mode-head">
+          <div>
+            <span class="label">Dziewięć pól</span>
+            <h3>Duże pola, mniej celowania</h3>
+            <p>Każde pole to kilka liter, a Wodzik zgaduje słowo ze słownika. Gdy trzeba, klawisz abc pozwala pisać litera po literze.</p>
+          </div>
+          <div class="chips"><span>Swipe po polach</span><span>Litera po literze</span></div>
+        </div>
+        <div class="frame t9">
+          <picture>
+            <source srcset="zrzuty/graphite-06-t9.png" media="(prefers-color-scheme: dark)">
+            <img src="zrzuty/mist-06-t9.png" width="1582" height="680" loading="lazy"
+                 alt="Wodzik w trybie T9: dziewięć dużych pól liter i podpowiedzi zobaczenia, zobaczyć, zobaczymy.">
+          </picture>
+        </div>
+      </div>
+      <div role="tabpanel" id="mode-kod" aria-labelledby="tab-kod" hidden>
+        <div class="mode-head">
+          <div>
+            <span class="label">Programowanie</span>
+            <h3>Tryb programisty</h3>
+            <p>Rząd symboli wybranego języka, słowa kluczowe w podpowiedziach, bez autokorekty i polskich liter.</p>
+          </div>
+          <div class="chips"><a class="btn btn-ghost btn-small" href="#kod">Więcej o trybie kodu →</a></div>
+        </div>
+        <div class="frame">
+          <picture>
+            <source srcset="zrzuty/graphite-07-kod.png" media="(prefers-color-scheme: dark)">
+            <img src="zrzuty/mist-07-kod.png" width="2000" height="804" loading="lazy"
+                 alt="Tryb programisty: rząd symboli nad literami i podpowiedzi return, replace, reversed.">
+          </picture>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" aria-labelledby="spacja-tytul">
+  <div class="panel cap">
+    <span class="label">Gest na spacji</span>
+    <h2 id="spacja-tytul">Spacja, Backspace i Enter w jednym klawiszu</h2>
+    <p class="lead">Nie musisz szukać Backspace ani Entera w rogach klawiatury. Spacja jest największym klawiszem, więc najłatwiej w nią trafić.</p>
+    <div class="spacebar" aria-hidden="true">
+      <div class="side left"><svg class="icon"><use href="icons.svg#arrow-left"/></svg><div><b>⌫ 2 słowa</b><small>w lewo: kasowanie</small></div></div>
+      <div class="mid">Spacja<small>kliknięcie</small></div>
+      <div class="side right"><svg class="icon"><use href="icons.svg#arrow-right"/></svg><div><b>Enter ↵</b><small>w prawo: Enter</small></div></div>
+    </div>
+    <p class="note"><svg class="icon" aria-hidden="true"><use href="icons.svg#info"/></svg>
+      <span>Przeciągnięcie w lewo o szerokość klawisza kasuje znak, a każde półtora klawisza dalej kasuje kolejne całe słowo. Enter idzie dopiero po puszczeniu przycisku, a powrót do środka go anuluje.</span></p>
+  </div>
+</section>
+
+<section class="section" id="skroty">
+  <div class="wrap split">
+    <div>
+      <span class="label">Panel skrótów</span>
+      <h2>Twój panel skrótów</h2>
+      <p class="lead">Około 70 gotowych skrótów w grupach: edycja, kursor, przeglądarka, multimedia, okna i pulpity wirtualne, Teams. Możesz też dodać własne i ułożyć kilka grup.</p>
+      <ul class="tiles">
+        <li><svg class="icon" aria-hidden="true"><use href="icons.svg#music"/></svg>Multimedia</li>
+        <li><svg class="icon" aria-hidden="true"><use href="icons.svg#pencil"/></svg>Edycja tekstu</li>
+        <li><svg class="icon" aria-hidden="true"><use href="icons.svg#zap"/></svg>Własne makra</li>
+        <li><svg class="icon" aria-hidden="true"><use href="icons.svg#layout-grid"/></svg>Do 7 rzędów po 4</li>
+      </ul>
+      <p class="macro">Makra wpisują tekst, naciskają skróty i robią pauzy, np. powitanie z podpisem albo <code>{ctrl+s}{pause 300}{alt+f4}</code>. Uruchamiasz je klawiszem Fn albo z listy w panelu.</p>
+    </div>
+    <div class="window cap">
+      <div class="window-bar"><span>Ustawienia → Panel skrótów</span><span>grupa „Multimedia”</span></div>
+      <picture>
+        <source srcset="zrzuty/graphite-11-ustawienia-panel-skrotow.png" media="(prefers-color-scheme: dark)">
+        <img src="zrzuty/mist-11-ustawienia-panel-skrotow.png" width="1880" height="1320" loading="lazy"
+             alt="Strona ustawień Panel skrótów: wybór grupy, podgląd przycisków multimediów i przyciski Dodaj w tym rzędzie oraz Dodaj w nowym rzędzie.">
+      </picture>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" aria-labelledby="zaznacz-tytul">
+  <div class="panel cap" style="background: color-mix(in srgb, var(--surface-3) 55%, var(--surface))">
+    <div class="head" style="margin-bottom: 0">
+      <span class="label">Zaznaczenie</span>
+      <h2 id="zaznacz-tytul">Zaznacz i działaj</h2>
+      <p>Zaznacz tekst w dowolnym programie, a Wodzik podsunie przyciski: w pasku podpowiedzi albo w dymku nad zaznaczeniem.</p>
+    </div>
+    <div class="select-demo cap">
+      <div class="bubble" aria-hidden="true">
+        <span><svg class="icon"><use href="icons.svg#copy"/></svg>Kopiuj</span>
+        <span><svg class="icon"><use href="icons.svg#scissors"/></svg>Wytnij</span>
+        <span><svg class="icon"><use href="icons.svg#trash-2"/></svg>Usuń</span>
+        <span class="add">+ 7 słów</span>
+      </div>
+      <blockquote>„Szybkie <mark>redagowanie dokumentów</mark> bez odrywania ręki od myszy”</blockquote>
+      <p>„+ 7 słów” dodaje do słownika wszystkie słowa z zaznaczenia, których słownik jeszcze nie zna.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section dark" id="kod">
+  <div class="wrap">
+    <div class="dark-head">
+      <div>
+        <span class="label">&lt;/&gt; Tryb programisty</span>
+        <h2>Programowanie myszką</h2>
+        <p class="lead">Rząd symboli wybranego języka, podpowiedzi ze słów kluczowych i Twoich nazw, bez autokorekty. W komentarzach i tekstach w cudzysłowie wracają podpowiedzi po polsku i angielsku.</p>
+      </div>
+      <ul class="langs" aria-label="Języki programowania">
+        <li>Python</li><li>JS / TS</li><li>Java</li><li>C#</li><li>C / C++</li><li>SQL</li><li>HTML / CSS</li><li>Shell</li>
+      </ul>
+    </div>
+    <div class="glass">
+      <div class="window-bar"><span>Python: rząd symboli nad literami</span><span>Git w miejscu mikrofonu</span></div>
+      <img src="zrzuty/graphite-07-kod.png" width="2000" height="804" loading="lazy"
+           alt="Ciemny motyw, tryb programisty: symbole ( ) [ ] { } nad literami, klawisze a_b i Git, podpowiedzi return, replace, reversed.">
+    </div>
+    <ul class="code-cards">
+      <li><span class="label">Nazwy z kilku słów</span><span class="from">get user name</span><span class="to">get_user_name</span><p>Klawisz a_b, potem słowa oddzielane spacją.</p></li>
+      <li><span class="label">Styl nazw</span><span class="from">get user name</span><span class="to">getUserName</span><p>Przytrzymaj a_b: a_b, aB, Ab, A_B, a-b.</p></li>
+      <li><span class="label">Operatory</span><span class="to">== != &lt;= -&gt; &amp;&amp;</span><p>Przytrzymaj = albo -, żeby wybrać operator. Przytrzymany ( wstawia () z kursorem w środku.</p></li>
+      <li><span class="label">Git</span><span class="to">status · pull · push</span><p>Proste polecenia wykonują się od razu, commit -m czeka na opis.</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section" id="prywatnosc">
+  <div class="wrap">
+    <div class="head">
+      <span class="label label-pill">Prywatność</span>
+      <h2>Prywatność od pierwszego kliknięcia</h2>
+      <p>To, co wpisujesz, nie opuszcza Twojego komputera. Bez telemetrii, bez serwerów, bez konta.</p>
+    </div>
+    <div class="grid4">
+      <article class="card cap">
+        <div class="ico"><svg class="icon" aria-hidden="true"><use href="icons.svg#wifi-off"/></svg></div>
+        <h3>Bez internetu</h3>
+        <p>Program nie łączy się z siecią: niczego nie wysyła i niczego nie pobiera.</p>
+        <div class="foot teal">0 połączeń</div>
+      </article>
+      <article class="card cap">
+        <div class="ico teal"><svg class="icon" aria-hidden="true"><use href="icons.svg#shield-check"/></svg></div>
+        <h3>Szyfrowanie</h3>
+        <p>Słownik osobisty, historia słów i makra są zaszyfrowane kluczem Twojego konta Windows (DPAPI).</p>
+        <div class="foot teal">%APPDATA%\Wodzik</div>
+      </article>
+      <article class="card cap">
+        <div class="ico"><svg class="icon" aria-hidden="true"><use href="icons.svg#eye-off"/></svg></div>
+        <h3>Pola haseł</h3>
+        <p>W polach oznaczonych jako hasło i w wybranych programach (np. menedżerach haseł) nic nie jest podpowiadane ani zapisywane.</p>
+        <div class="foot teal">Lista wykluczeń w ustawieniach</div>
+      </article>
+      <article class="card cap">
+        <div class="ico teal"><svg class="icon" aria-hidden="true"><use href="icons.svg#hard-drive"/></svg></div>
+        <h3>Tylko u Ciebie</h3>
+        <p>Bez konta, logowania i subskrypcji. Uczenie wstrzymasz jednym przyciskiem, a dane przeniesiesz eksportem do pliku.</p>
+        <div class="foot teal">Pauza uczenia na górnym pasku</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" id="kontakt" aria-labelledby="kontakt-tytul">
+  <div class="download cap">
+    <img src="logo.svg" alt="" width="80" height="80">
+    <span class="badge">Wkrótce do pobrania</span>
+    <h2 id="kontakt-tytul">Chcesz wypróbować Wodzika?</h2>
+    <p>Wodzik nie jest jeszcze dostępny do pobrania. Napisz do mnie, jeśli chcesz go przetestować, masz pytanie albo pomysł.</p>
+    <div class="actions">
+      <a class="btn btn-primary btn-big" id="mail" data-user="adzikg" data-domain="gmail.com" data-subject="Wodzik"
+         href="#kontakt"><svg class="icon" aria-hidden="true"><use href="icons.svg#mail"/></svg>Napisz do mnie</a>
+    </div>
+    <small id="mail-text">adzikg [małpa] gmail.com</small>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="faq-tytul">
+  <div class="wrap">
+    <div class="head"><h2 id="faq-tytul">Częste pytania</h2></div>
+    <div class="faq">
+      <details class="cap">
+        <summary><svg class="icon" aria-hidden="true"><use href="icons.svg#keyboard"/></svg>Jak pokazać lub schować klawiaturę?</summary>
+        <p><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>K</kbd> albo ikona w zasobniku obok zegara. Klawiatura może też sama wysuwać się po kliknięciu w pole tekstowe (Ustawienia → Ogólne).</p>
+      </details>
+      <details class="cap">
+        <summary><svg class="icon" aria-hidden="true"><use href="icons.svg#arrow-right-left"/></svg>Jak przenieść słownik na inny komputer?</summary>
+        <p>Ustawienia → Prywatność → Eksportuj do pliku, a na drugim komputerze Importuj z pliku. Plik eksportu nie jest zaszyfrowany, więc po przeniesieniu go usuń.</p>
+      </details>
+      <details class="cap">
+        <summary><svg class="icon" aria-hidden="true"><use href="icons.svg#info"/></svg>Czego Wodzik nie potrafi?</summary>
+        <p>Nie wpisze tekstu do okien uruchomionych jako administrator. T9 nie wpisze słowa spoza słownika (do tego służy QWERTY), a swipe po polach T9 jest mniej trafny niż na QWERTY.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot-bar">
+  <div class="wrap">
+    <a class="brand" href="#tresc"><img src="logo.svg" alt="" width="28" height="28">Wodzik 0.4</a>
+    <nav aria-label="Linki">
+      <a href="#funkcje">Funkcje</a>
+      <a href="#prywatnosc">Prywatność</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <div class="legal">© 2026 Wodzik. Kod: wszystkie prawa zastrzeżone.
+      <small>Fonty Manrope, Inter, JetBrains Mono (<a href="fonts/LICENSE-inter.txt">OFL</a>), ikony Lucide (<a href="icons-LICENSE.txt">ISC</a>).</small></div>
+  </div>
+</footer>
+</body>
+</html>

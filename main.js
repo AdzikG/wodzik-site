@@ -22,7 +22,19 @@ document.getElementById("mail-text").textContent = address;
 // Each tab list switches its own panels (typing modes, typing without clicking, more keys).
 for (const list of document.querySelectorAll('[role="tablist"]')) {
   const tabs = [...list.querySelectorAll('[role="tab"]')];
+  const panels = tabs.map((tab) => document.getElementById(tab.getAttribute("aria-controls")));
+  // Lazy images in hidden panels load only once shown, so a switch showed an empty frame first
+  // (or, in some browsers, until the next scroll). Fetch them as soon as the tab list is in reach.
+  const warm = () => {
+    for (const img of panels.flatMap((panel) => [...panel.querySelectorAll('img[loading="lazy"]')])) {
+      img.loading = "eager";
+    }
+  };
+  for (const type of ["pointerenter", "focusin", "touchstart"]) {
+    list.addEventListener(type, warm, { once: true, passive: true });
+  }
   const select = (tab) => {
+    warm();
     for (const other of tabs) {
       const on = other === tab;
       other.setAttribute("aria-selected", String(on));

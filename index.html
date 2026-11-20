@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Wodzik: klawiatura ekranowa dla Windows 11</title>
-<meta name="description" content="Klawiatura ekranowa dla Windows 11 obsługiwana myszką: klikanie, swipe i T9, podpowiedzi po polsku i angielsku. Wszystko offline.">
+<meta name="description" content="Klawiatura ekranowa dla Windows 11 obsługiwana myszką: klikanie, swipe i T9, podpowiedzi po polsku i angielsku, pisanie bez klikania. Wszystko offline.">
 <meta name="theme-color" content="#e2e9f2" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#14181e" media="(prefers-color-scheme: dark)">
 <meta property="og:title" content="Wodzik: pisz myszką. Szybko.">
@@ -27,6 +27,7 @@
     <nav class="nav" id="menu" aria-label="Sekcje strony">
       <a href="#funkcje">Funkcje</a>
       <a href="#sposoby">Swipe i T9</a>
+      <a href="#dostepnosc">Bez klikania</a>
       <a href="#skroty">Skróty</a>
       <a href="#kod">Programowanie</a>
       <a href="#ustawienia">Ustawienia</a>
@@ -48,7 +49,7 @@
 <section class="hero">
   <div class="wrap hero-grid">
     <div class="hero-text">
-      <span class="news">Nowa wersja 0.4 dla Windows 11</span>
+      <a class="news" href="#dostepnosc">Nowość: pisanie bez klikania</a>
       <h1>Pisz myszką.<br><span>Szybko.</span></h1>
       <p>Klawiatura ekranowa dla Windows 11: klikanie, swipe i T9, podpowiedzi po polsku i angielsku. Wszystko offline.</p>
       <div class="actions">
@@ -225,6 +226,106 @@
   </div>
 </section>
 
+<section class="section" id="dostepnosc">
+  <div class="wrap">
+    <div class="head">
+      <span class="label label-pill">Dostępność</span>
+      <h2>Pisanie bez klikania</h2>
+      <p>Dla osób, którym trudno klikać: wystarczy zatrzymać kursor. Autoklik działa na każdym klawiszu, w pasku podpowiedzi i w panelu skrótów, a włączysz go w Ustawienia → Dostępność.</p>
+      <div class="tabs" role="tablist" aria-label="Pisanie bez klikania">
+        <button type="button" role="tab" id="tab-autoklik" aria-controls="dwell-autoklik" aria-selected="true">Autoklik</button>
+        <button type="button" role="tab" id="tab-postoj" aria-controls="dwell-swipe" aria-selected="false" tabindex="-1">Swipe zatrzymaniem</button>
+      </div>
+    </div>
+    <div class="deck">
+      <div role="tabpanel" id="dwell-autoklik" aria-labelledby="tab-autoklik">
+        <div class="mode-head">
+          <div>
+            <span class="label">Zatrzymaj kursor</span>
+            <h3>Klawisz klika się sam</h3>
+            <p>Kursor zatrzymany na klawiszu wypełnia pasek na jego dole, a gdy pasek dojdzie do końca, klawisz się klika. Ten sam klawisz kliknie znowu dopiero po zjechaniu z niego, więc drżenie ręki nic nie dopisze. Backspace i strzałki powtarzają się przy dalszym postoju, a drugi postój na Shift czy Ctrl blokuje klawisz.</p>
+          </div>
+          <div class="chips"><span>Czas 300–2000 ms</span><span>Pauza na górnym pasku</span></div>
+        </div>
+        <div class="frame">
+          <picture>
+            <source srcset="zrzuty/graphite-14-autoklik.png" media="(prefers-color-scheme: dark)">
+            <img src="zrzuty/mist-14-autoklik.png" width="2000" height="680" loading="lazy"
+                 alt="Autoklik: kursor stoi na klawiszu r, pasek na jego dole wypełnił się do połowy; wpisane „dzień dob” i podpowiedzi dobry, dobrze.">
+          </picture>
+        </div>
+      </div>
+      <div role="tabpanel" id="dwell-swipe" aria-labelledby="tab-postoj" hidden>
+        <div class="mode-head">
+          <div>
+            <span class="label">Całe słowo, dwa postoje</span>
+            <h3>Swipe bez wciskania przycisku</h3>
+            <p>Postój na pierwszej literze zaczyna ślad, a litera się zapala. Prowadzisz kursor po kolejnych literach, krótkie zawahania nie przeszkadzają. Postój na ostatniej literze odlicza na całym klawiszu i wpisuje słowo. Ślad jest oczyszczany z drżenia ręki, więc rozpoznanie jest tak trafne jak przy zwykłym swipe.</p>
+          </div>
+          <div class="chips"><span>~90% trafionych słów</span><span>Postój bez ruchu: litera</span></div>
+        </div>
+        <div class="frame">
+          <picture>
+            <source srcset="zrzuty/graphite-15-swipe-postojem.png" media="(prefers-color-scheme: dark)">
+            <img src="zrzuty/mist-15-swipe-postojem.png" width="2000" height="680" loading="lazy"
+                 alt="Swipe zatrzymaniem słowa „dnia”: zapalona litera d, ślad przez n i i, na literze a kurczy się wypełnienie odliczające koniec.">
+          </picture>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="klawisze">
+  <div class="wrap">
+    <div class="head">
+      <span class="label label-pill">Klawisze</span>
+      <h2>Więcej pod ręką</h2>
+      <p>Cyfry, symbole i skróty bez szukania po warstwach.</p>
+      <div class="tabs" role="tablist" aria-label="Więcej pod ręką">
+        <button type="button" role="tab" id="tab-cyfry" aria-controls="keys-cyfry" aria-selected="true">Rząd cyfr</button>
+        <button type="button" role="tab" id="tab-ctrl" aria-controls="keys-ctrl" aria-selected="false" tabindex="-1">Skróty pod Ctrl</button>
+      </div>
+    </div>
+    <div class="deck">
+      <div role="tabpanel" id="keys-cyfry" aria-labelledby="tab-cyfry">
+        <div class="mode-head">
+          <div>
+            <span class="label">Do włączenia w ustawieniach</span>
+            <h3>Osobny rząd cyfr</h3>
+            <p>Niski rząd dziesięciu szerokich cyfr nad literami. Shift, przytrzymanie albo prawy klik wpisuje znak nad cyfrą, jak na zwykłej klawiaturze. Na warstwie symboli w miejscu cyfr są wtedy nawiasy i operatory.</p>
+          </div>
+          <div class="chips"><span>1 ! 2 @ 3 # …</span><span>e → ę bez czekania</span></div>
+        </div>
+        <div class="frame">
+          <picture>
+            <source srcset="zrzuty/graphite-12-rzad-cyfr.png" media="(prefers-color-scheme: dark)">
+            <img src="zrzuty/mist-12-rzad-cyfr.png" width="2000" height="768" loading="lazy"
+                 alt="Wodzik z rzędem cyfr od 1 do 0 nad literami, przy każdej cyfrze jej znak z Shiftem; wpisane „spotkanie o 15”.">
+          </picture>
+        </div>
+      </div>
+      <div role="tabpanel" id="keys-ctrl" aria-labelledby="tab-ctrl" hidden>
+        <div class="mode-head">
+          <div>
+            <span class="label">Ctrl i Win</span>
+            <h3>Klawisze mówią, co robią</h3>
+            <p>Po włączeniu Ctrl albo Win litery pokazują nazwy skrótów: C to Kopiuj, V Wklej, Z Cofnij, a z Win: D Pulpit, V Schowek, L Zablokuj. Litera zostaje w rogu klawisza.</p>
+          </div>
+          <div class="chips"><span>Ctrl · Ctrl+Shift</span><span>Win · Win+Shift</span></div>
+        </div>
+        <div class="frame">
+          <picture>
+            <source srcset="zrzuty/graphite-13-skroty-ctrl.png" media="(prefers-color-scheme: dark)">
+            <img src="zrzuty/mist-13-skroty-ctrl.png" width="2000" height="680" loading="lazy"
+                 alt="Włączony Ctrl: na literach nazwy skrótów, m.in. Kopiuj na C, Wklej na V, Cofnij na Z, Zapisz na S, Szukaj na F.">
+          </picture>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="wrap" aria-labelledby="spacja-tytul">
   <div class="panel cap">
     <span class="label">Gest na spacji</span>
@@ -316,7 +417,7 @@
     <div class="head">
       <span class="label label-pill">Ustawienia</span>
       <h2>Ustaw go po swojemu</h2>
-      <p>Prawie każdą funkcję możesz wyłączyć, a resztę dopasować do siebie. Osiem stron ustawień i kilkadziesiąt opcji, bez grzebania w plikach.</p>
+      <p>Prawie każdą funkcję możesz wyłączyć, a resztę dopasować do siebie. Dziewięć stron ustawień i kilkadziesiąt opcji, bez grzebania w plikach.</p>
     </div>
     <div class="grid4">
       <article class="card cap">
@@ -339,7 +440,7 @@
           <li>Swipe i ślad ruchu<span class="sw on" aria-label="włączone"></span></li>
           <li>Gesty na spacji<span class="sw on" aria-label="włączone"></span></li>
           <li>Backspace kasuje słowa<span class="sw" aria-label="wyłączone"></span></li>
-          <li>Czas przytrzymania<span class="val">400 ms</span></li>
+          <li>Rząd cyfr<span class="sw" aria-label="wyłączone"></span></li>
         </ul>
         <div class="foot">Niepotrzebne tryby T9 i kodu ukryjesz</div>
       </article>
@@ -369,7 +470,7 @@
       </article>
     </div>
     <p class="more"><svg class="icon" aria-hidden="true"><use href="icons.svg#info"/></svg>
-      <span>Do tego słownik osobisty z wyszukiwarką i listą zablokowanych słów, edytor panelu skrótów, dwa zestawy makr (do tekstu i do kodu), lista programów, w których Wodzik nic nie zapamiętuje, oraz eksport i import wszystkich ustawień do jednego pliku.</span></p>
+      <span>Do tego strona Dostępność (autoklik, swipe zatrzymaniem, czas przytrzymania), słownik osobisty z wyszukiwarką i listą zablokowanych słów, edytor panelu skrótów, dwa zestawy makr (do tekstu i do kodu), lista programów, w których Wodzik nic nie zapamiętuje, oraz eksport i import wszystkich ustawień do jednego pliku.</span></p>
   </div>
 </section>
 
@@ -430,6 +531,10 @@
       <details class="cap">
         <summary><svg class="icon" aria-hidden="true"><use href="icons.svg#keyboard"/></svg>Jak pokazać lub schować klawiaturę?</summary>
         <p><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>K</kbd> albo ikona w zasobniku obok zegara. Klawiatura może też sama wysuwać się po kliknięciu w pole tekstowe (Ustawienia → Ogólne).</p>
+      </details>
+      <details class="cap">
+        <summary><svg class="icon" aria-hidden="true"><use href="icons.svg#sparkles"/></svg>Czy da się pisać bez klikania?</summary>
+        <p>Tak. Ustawienia → Dostępność → Klik po zatrzymaniu kursora: klawisz klika się sam, gdy kursor na nim postoi. Swipe zatrzymaniem wpisuje całe słowo dwoma postojami, na pierwszej i ostatniej literze. Strzałka kursora na górnym pasku wstrzymuje autoklik.</p>
       </details>
       <details class="cap">
         <summary><svg class="icon" aria-hidden="true"><use href="icons.svg#arrow-right-left"/></svg>Jak przenieść słownik na inny komputer?</summary>

@@ -22,7 +22,7 @@
 <header class="top" id="top">
   <div class="wrap">
     <a class="brand" href="#tresc" aria-label="Wodzik, początek strony">
-      <img src="logo.svg" alt="" width="32" height="32">Wodzik <span class="badge">v0.4</span>
+      <img src="logo.svg" alt="" width="32" height="32">Wodzik <span class="badge">v0.7</span>
     </a>
     <nav class="nav" id="menu" aria-label="Sekcje strony">
       <a href="#funkcje">Funkcje</a>
@@ -31,7 +31,7 @@
       <a href="#skroty">Skróty</a>
       <a href="#kod">Programowanie</a>
       <a href="#ustawienia">Ustawienia</a>
-      <a href="#prywatnosc">Prywatność</a>
+      <a href="#prywatnosc">Bezpieczeństwo</a>
       <a href="#kontakt">Kontakt</a>
     </nav>
     <div class="top-actions">
@@ -49,7 +49,7 @@
 <section class="hero">
   <div class="wrap hero-grid">
     <div class="hero-text">
-      <a class="news" href="#dostepnosc">Nowość: pisanie bez klikania</a>
+      <a class="news" href="#poprawianie">Nowość: popraw słowo sprzed chwili</a>
       <h1>Pisz myszką.<br><span>Szybko.</span></h1>
       <p>Klawiatura ekranowa dla Windows 11: klikanie, swipe i T9, podpowiedzi po polsku i angielsku. Wszystko offline.</p>
       <div class="actions">
@@ -57,7 +57,7 @@
         <a class="btn btn-ghost" href="#funkcje"><svg class="icon" aria-hidden="true"><use href="icons.svg#sparkles"/></svg>Zobacz, co potrafi</a>
       </div>
       <ul class="pills">
-        <li><svg class="icon" aria-hidden="true"><use href="icons.svg#check"/></svg>Bezpłatna</li>
+        <li><svg class="icon" aria-hidden="true"><use href="icons.svg#check"/></svg>Wersja próbna</li>
         <li><svg class="icon" aria-hidden="true"><use href="icons.svg#ban"/></svg>Bez reklam</li>
         <li><svg class="icon" aria-hidden="true"><use href="icons.svg#wifi-off"/></svg>Działa offline</li>
       </ul>
@@ -66,7 +66,7 @@
       <picture>
         <source srcset="zrzuty/graphite-00-hero.png" media="(prefers-color-scheme: dark)">
         <img src="zrzuty/mist-00-hero.png" width="2000" height="680" fetchpriority="high"
-             alt="Okno Wodzika: klawisze QWERTY, wpisane „dzień dobry” i podpowiedzi następnego słowa: proszę, panie, pani, wieczór.">
+             alt="Okno Wodzika: klawisze jak prawdziwe nasadki, wpisane „dzień dobry” i podpowiedzi następnego słowa, m.in. proszę i pomysł.">
       </picture>
       <svg class="trail" viewBox="0 0 1000 340" fill="none" aria-hidden="true">
         <defs>
@@ -93,7 +93,7 @@
   <ul class="stats">
     <li class="cap press"><span class="label">Trafność</span><strong>90%</strong><span>słów ze swipe'a trafionych za pierwszym razem</span></li>
     <li class="cap press"><span class="label">Szybkość</span><strong>~12 ms</strong><span>na rozpoznanie gestu</span></li>
-    <li class="cap press"><span class="label">Start</span><strong>1,4 s</strong><span>od uruchomienia do pisania</span></li>
+    <li class="cap press"><span class="label">Start</span><strong>1,3 s</strong><span>od uruchomienia do pisania</span></li>
     <li class="cap press"><span class="label">Prywatność</span><strong>0</strong><span>połączeń z siecią</span></li>
   </ul>
 </section>
@@ -108,53 +108,55 @@
     <div class="grid4">
       <article class="card cap press">
         <div class="ico"><svg class="icon" aria-hidden="true"><use href="icons.svg#spline"/></svg></div>
-        <h3>Swipe</h3>
-        <p>Przeciągnij po literach z wciśniętym przyciskiem myszy: całe słowo jednym ruchem.</p>
+        <h3>Swipe myszą</h3>
+        <p>Przeciągnij po literach z wciśniętym przyciskiem myszy: całe słowo jednym ruchem. Systemowe klawiatury robią to tylko dotykiem.</p>
         <div class="foot">Inne odczyty gestu w pasku</div>
       </article>
       <article class="card cap press">
         <div class="ico teal"><svg class="icon" aria-hidden="true"><use href="icons.svg#grid-3x3"/></svg></div>
-        <h3>T9</h3>
-        <p>Dziewięć dużych pól: mniej celowania, a Wodzik sam zgaduje słowo. Swipe też działa.</p>
+        <h3>T9 na komputerze</h3>
+        <p>Dziewięć dużych pól: mniej celowania, a Wodzik sam zgaduje słowo. Swipe po polach też działa.</p>
         <div class="foot">abc · def · ghi</div>
       </article>
       <article class="card cap press">
-        <div class="ico"><svg class="icon" aria-hidden="true"><use href="icons.svg#sparkles"/></svg></div>
-        <h3>Podpowiedzi PL i EN</h3>
-        <p>Do 15 słów w pasku: dokończenie wyrazu i propozycje następnego słowa.</p>
-        <div class="foot"><span class="chip">termin</span><span class="chip">proszę</span></div>
-      </article>
-      <article class="card cap press">
         <div class="ico">ą/ę</div>
-        <h3>Polskie znaki</h3>
-        <p>Przytrzymaj klawisz albo kliknij go prawym przyciskiem. Spacja sama uzupełnia ogonki.</p>
-        <div class="foot"><span class="chip">a → ą</span><span class="chip">pozno → późno</span></div>
-      </article>
-      <article class="card cap press">
-        <div class="ico"><svg class="icon" aria-hidden="true"><use href="icons.svg#space"/></svg></div>
-        <h3>Gesty na spacji</h3>
-        <p>Przeciągnij ze spacji w lewo, żeby kasować (dalej: całe słowa), w prawo, żeby wysłać Enter.</p>
-        <div class="foot">← ⌫ · Enter ↵ →</div>
-      </article>
-      <article class="card cap press">
-        <div class="ico teal"><svg class="icon" aria-hidden="true"><use href="icons.svg#smile"/></svg></div>
-        <h3>Emoji po polsku</h3>
-        <p>Wpisz „serce”, „kawa” albo „brawo”, a pasek podsunie pasujące emoji.</p>
-        <div class="foot"><span class="emoji" aria-hidden="true">❤️☕👏</span></div>
-      </article>
-      <article class="card cap press">
-        <div class="ico"><svg class="icon" aria-hidden="true"><use href="icons.svg#clipboard-paste"/></svg></div>
-        <h3>Schowek pod ręką</h3>
-        <p>Po skopiowaniu pasek pokazuje początek tekstu, a jedno kliknięcie wkleja go bez formatowania. Działa też z obrazami.</p>
-        <div class="foot">Wklej: „Dzień dobry…”</div>
+        <h3>Podpowiedzi PL i EN</h3>
+        <p>Do 15 słów w pasku: dokończenie wyrazu i następne słowo. Ogonki nie są potrzebne: „pozno” zamienia się w „późno”.</p>
+        <div class="foot"><span class="chip">pozno → późno</span><span class="chip">proszę</span></div>
       </article>
       <article class="card cap press">
         <div class="ico teal"><svg class="icon" aria-hidden="true"><use href="icons.svg#book-plus"/></svg></div>
         <h3>Uczy się Ciebie</h3>
-        <p>Zapamiętuje Twoje słowa i to, co zwykle piszesz po czym. Wszystko zostaje na Twoim komputerze.</p>
+        <p>Zapamiętuje Twoje słowa i to, co zwykle piszesz po czym, więc podpowiedzi są coraz trafniejsze. Wszystko zostaje na Twoim komputerze.</p>
         <div class="foot teal"><svg class="icon" aria-hidden="true"><use href="icons.svg#lock"/></svg>Bez chmury</div>
       </article>
+      <article class="card cap press">
+        <div class="ico"><svg class="icon" aria-hidden="true"><use href="icons.svg#pencil"/></svg></div>
+        <h3>Popraw słowo sprzed chwili</h3>
+        <p>Kliknij podgląd tekstu i wybierz słowo: zamienisz je, usuniesz albo wpiszesz od nowa, bez cofania kursora.</p>
+        <div class="foot"><span class="chip">morze → może</span></div>
+      </article>
+      <article class="card cap press">
+        <div class="ico teal"><svg class="icon" aria-hidden="true"><use href="icons.svg#mouse-pointer-click"/></svg></div>
+        <h3>Pisanie bez klikania</h3>
+        <p>Klawisz klika się sam, gdy kursor na nim postoi. Całe słowo wpiszesz swipe’em z dwoma postojami.</p>
+        <div class="foot">Dla osób, którym trudno klikać</div>
+      </article>
+      <article class="card cap press">
+        <div class="ico"><svg class="icon" aria-hidden="true"><use href="icons.svg#code"/></svg></div>
+        <h3>Tryb programisty</h3>
+        <p>Rząd symboli wybranego języka, nazwy z kilku słów jednym klawiszem i polecenia git, bez autokorekty.</p>
+        <div class="foot"><span class="chip">get user name → get_user_name</span></div>
+      </article>
+      <article class="card cap press">
+        <div class="ico teal"><svg class="icon" aria-hidden="true"><use href="icons.svg#keyboard"/></svg></div>
+        <h3>Podgląd skrótów</h3>
+        <p>Po włączeniu Ctrl albo Win litery pokazują nazwy skrótów, a pod Fn nazwy Twoich makr. Nie trzeba ich pamiętać.</p>
+        <div class="foot"><span class="chip">C: Kopiuj</span><span class="chip">V: Wklej</span></div>
+      </article>
     </div>
+    <p class="more"><svg class="icon" aria-hidden="true"><use href="icons.svg#info"/></svg>
+      <span>Do tego emoji po polskich słowach („serce”, „kawa”), podgląd i wklejanie schowka, polskie znaki pod przytrzymaniem klawisza i gesty na spacji.</span></p>
   </div>
 </section>
 
@@ -184,7 +186,7 @@
           <picture>
             <source srcset="zrzuty/graphite-02-swipe.png" media="(prefers-color-scheme: dark)">
             <img src="zrzuty/mist-02-swipe.png" width="2000" height="680" loading="lazy"
-                 alt="Ślad gestu swipe przez litery słowa „dziękuję”; w pasku inne odczyty gestu: dziękuje, dziele, dzielę.">
+                 alt="Ślad gestu swipe przez litery słowa „proszę”; w pasku inne odczyty gestu: prozę, poroże, protezę.">
           </picture>
         </div>
       </div>
@@ -219,6 +221,35 @@
             <source srcset="zrzuty/graphite-07-kod.png" media="(prefers-color-scheme: dark)">
             <img src="zrzuty/mist-07-kod.png" width="2000" height="804" loading="lazy"
                  alt="Tryb programisty: rząd symboli nad literami i podpowiedzi return, replace, reversed.">
+          </picture>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="poprawianie">
+  <div class="wrap">
+    <div class="head">
+      <span class="label label-pill">Nowość</span>
+      <h2>Popraw słowo sprzed chwili</h2>
+      <p>Pomyłkę kilka słów wcześniej poprawisz bez strzałek i kasowania pół zdania.</p>
+    </div>
+    <div class="deck">
+      <div>
+        <div class="mode-head">
+          <div>
+            <span class="label">Kliknij podgląd tekstu</span>
+            <h3>Zamień, usuń albo wpisz od nowa</h3>
+            <p>Górny pasek pokazuje, co właśnie piszesz. Kliknij tekst albo ołówek obok niego, wybierz słowo, a pasek podpowie inne: najpierw te same litery z innymi ogonkami, potem podobne słowa. Wodzik sam przesunie kursor, zmieni tylko to, co trzeba, i wróci na koniec. Przed zmianą sprawdza, czy w polu jest wciąż ten sam tekst.</p>
+          </div>
+          <div class="chips"><span>morze → może</span><span>Wpisz od nowa</span><span>Usuń</span></div>
+        </div>
+        <div class="frame">
+          <picture>
+            <source srcset="zrzuty/graphite-16-poprawianie.png" media="(prefers-color-scheme: dark)">
+            <img src="zrzuty/mist-16-poprawianie.png" width="2000" height="680" loading="lazy"
+                 alt="Poprawianie pomyłki „morze” w zdaniu „jutro rano morze będzie ładna pogoda”: w pasku jako pierwsze może, dalej morzem, możesz, możemy oraz przyciski Wpisz od nowa i Usuń.">
           </picture>
         </div>
       </div>
@@ -412,6 +443,31 @@
   </div>
 </section>
 
+<section class="section" id="wyglad">
+  <div class="wrap split">
+    <div>
+      <span class="label">Wygląd</span>
+      <h2>Klawisze jak prawdziwe</h2>
+      <p class="lead">Klawisze mają krawędź i wciskają się pod kursorem, a za swipe’em ciągnie się świetlista kometa. Okno ustawień i menu wyglądają jak sama klawiatura.</p>
+      <ul class="tiles">
+        <li><svg class="icon" aria-hidden="true"><use href="icons.svg#monitor"/></svg>5 motywów i systemowe</li>
+        <li><svg class="icon" aria-hidden="true"><use href="icons.svg#spline"/></svg>Kometa za swipe’em</li>
+        <li><svg class="icon" aria-hidden="true"><use href="icons.svg#layout-grid"/></svg>Rozmiar z proporcjami</li>
+        <li><svg class="icon" aria-hidden="true"><use href="icons.svg#eye-off"/></svg>Przezroczystość i rozmycie</li>
+      </ul>
+      <p class="macro">Motywy: Graphite, Midnight, Forest, Sand i Mist, a do tego „Jak Windows”, jasny i ciemny z kolorem akcentu Windows oraz wysoki kontrast. Róg okna zmienia rozmiar bez zniekształcania klawiszy.</p>
+    </div>
+    <div class="window cap">
+      <div class="window-bar"><span>Ustawienia → Wygląd</span><span>w kolorach motywu</span></div>
+      <picture>
+        <source srcset="zrzuty/graphite-17-ustawienia-wyglad.png" media="(prefers-color-scheme: dark)">
+        <img src="zrzuty/mist-17-ustawienia-wyglad.png" width="1880" height="1320" loading="lazy"
+             alt="Strona ustawień Wygląd: kafelki motywów z próbką klawiszy, suwak rozmiaru, przełącznik rozmycia tła i suwaki krycia.">
+      </picture>
+    </div>
+  </div>
+</section>
+
 <section class="section" id="ustawienia">
   <div class="wrap">
     <div class="head">
@@ -461,10 +517,10 @@
         <h3>Zachowanie</h3>
         <ul class="opts">
           <li>Skrót pokaż/ukryj<span class="val">Ctrl+Alt+K</span></li>
+          <li>Przycisk minimalizacji<span class="val">pasek · zasobnik</span></li>
           <li>Start razem z Windows<span class="sw" aria-label="wyłączone"></span></li>
           <li>Wysuwanie przy polu tekstowym<span class="sw" aria-label="wyłączone"></span></li>
           <li>Akcje zaznaczenia<span class="val">pasek · dymek</span></li>
-          <li>Podgląd schowka<span class="sw on" aria-label="włączone"></span></li>
         </ul>
         <div class="foot">Cyfry same w polach liczbowych</div>
       </article>
@@ -477,15 +533,15 @@
 <section class="section" id="prywatnosc">
   <div class="wrap">
     <div class="head">
-      <span class="label label-pill">Prywatność</span>
-      <h2>Prywatność od pierwszego kliknięcia</h2>
+      <span class="label label-pill">Prywatność i bezpieczeństwo</span>
+      <h2>Widzi wszystko, co piszesz. Dlatego nic nie wynosi</h2>
       <p>To, co wpisujesz, nie opuszcza Twojego komputera. Bez telemetrii, bez serwerów, bez konta.</p>
     </div>
     <div class="grid4">
       <article class="card cap">
         <div class="ico"><svg class="icon" aria-hidden="true"><use href="icons.svg#wifi-off"/></svg></div>
         <h3>Bez internetu</h3>
-        <p>Program nie łączy się z siecią: niczego nie wysyła i niczego nie pobiera.</p>
+        <p>Program nie zawiera kodu sieciowego: niczego nie wysyła i niczego nie pobiera. Przewidywanie słów też działa lokalnie.</p>
         <div class="foot teal">0 połączeń</div>
       </article>
       <article class="card cap">
@@ -497,16 +553,18 @@
       <article class="card cap">
         <div class="ico"><svg class="icon" aria-hidden="true"><use href="icons.svg#eye-off"/></svg></div>
         <h3>Pola haseł</h3>
-        <p>W polach oznaczonych jako hasło i w wybranych programach (np. menedżerach haseł) nic nie jest podpowiadane ani zapisywane.</p>
+        <p>W polach haseł, w terminalach i w wybranych programach nic nie jest podpowiadane, poprawiane, zapamiętywane ani pokazywane w podglądzie.</p>
         <div class="foot teal">Lista wykluczeń w ustawieniach</div>
       </article>
       <article class="card cap">
         <div class="ico teal"><svg class="icon" aria-hidden="true"><use href="icons.svg#hard-drive"/></svg></div>
         <h3>Tylko u Ciebie</h3>
-        <p>Bez konta, logowania i subskrypcji. Uczenie wstrzymasz jednym przyciskiem, a dane przeniesiesz eksportem do pliku.</p>
-        <div class="foot teal">Pauza uczenia na górnym pasku</div>
+        <p>Bez konta i logowania. Uczenie wstrzymasz jednym przyciskiem, a dane przeniesiesz eksportem do pliku.</p>
+        <div class="foot teal">Pauza uczenia w menu ⋯</div>
       </article>
     </div>
+    <p class="more"><svg class="icon" aria-hidden="true"><use href="icons.svg#shield-check"/></svg>
+      <span>Do tego: nie podsłuchuje fizycznej klawiatury, dziennik diagnostyczny nie zawiera wpisywanego tekstu, instaluje się bez uprawnień administratora, a na życzenie znika z nagrań i udostępniania ekranu. Wodzik nie obroni przed programem, który już działa na Twoim koncie z tymi samymi uprawnieniami; tego nie potrafi żadna klawiatura ekranowa. Problem z bezpieczeństwem? Napisz: security [małpa] wodzik.app.</span></p>
   </div>
 </section>
 
@@ -537,8 +595,36 @@
         <p>Tak. Ustawienia → Dostępność → Klik po zatrzymaniu kursora: klawisz klika się sam, gdy kursor na nim postoi. Swipe zatrzymaniem wpisuje całe słowo dwoma postojami, na pierwszej i ostatniej literze. Strzałka kursora na górnym pasku wstrzymuje autoklik.</p>
       </details>
       <details class="cap">
+        <summary><svg class="icon" aria-hidden="true"><use href="icons.svg#pencil"/></svg>Jak poprawić słowo wpisane wcześniej?</summary>
+        <p>Kliknij podgląd tekstu na górnym pasku (albo ołówek obok niego) i wybierz słowo. Pasek pokaże inne słowa do wstawienia, a także „Wpisz od nowa” i „Usuń”. Działa od drugiego słowa w zdaniu; pierwsze poprawisz Backspace’em.</p>
+      </details>
+      <details class="cap">
+        <summary><svg class="icon" aria-hidden="true"><use href="icons.svg#book-plus"/></svg>Jak dodać własne słowo albo usunąć podpowiedź?</summary>
+        <p>Słowo spoza słownika Wodzik zapamiętuje sam, a podpowiada od drugiego użycia. Od razu doda je przycisk „+ słowo” w pasku albo Ustawienia → Słownik. Prawy klik na podpowiedzi usuwa ją z podpowiedzi.</p>
+      </details>
+      <details class="cap">
+        <summary><svg class="icon" aria-hidden="true"><use href="icons.svg#monitor"/></svg>Jak zmienić wielkość i wygląd klawiatury?</summary>
+        <p>Przeciągnij róg okna: klawiatura rośnie albo maleje bez zniekształcania klawiszy. Motyw, rozmiar, przezroczystość i wielkość napisów zmienisz w Ustawienia → Wygląd, a „Przywróć” wraca do rozmiaru po instalacji.</p>
+      </details>
+      <details class="cap">
+        <summary><svg class="icon" aria-hidden="true"><use href="icons.svg#zap"/></svg>Czy mogę zmienić skrót Ctrl+Alt+K?</summary>
+        <p>Tak: Ustawienia → Ogólne → Skrót pokaż/ukryj. Kliknij go i naciśnij nowe połączenie klawiszy, Esc anuluje.</p>
+      </details>
+      <details class="cap">
         <summary><svg class="icon" aria-hidden="true"><use href="icons.svg#arrow-right-left"/></svg>Jak przenieść słownik na inny komputer?</summary>
         <p>Ustawienia → Prywatność → Eksportuj do pliku, a na drugim komputerze Importuj z pliku. Plik eksportu nie jest zaszyfrowany, więc po przeniesieniu go usuń.</p>
+      </details>
+      <details class="cap">
+        <summary><svg class="icon" aria-hidden="true"><use href="icons.svg#shield-check"/></svg>Czy Wodzik jest bezpieczny?</summary>
+        <p>Działa bez internetu i nie zawiera kodu sieciowego, w polach haseł niczego nie zapamiętuje, a Twój słownik i makra są zaszyfrowane dla konta Windows. Nie chroni przed programem, który już działa na Twoim koncie: ten ma te same uprawnienia co Wodzik.</p>
+      </details>
+      <details class="cap">
+        <summary><svg class="icon" aria-hidden="true"><use href="icons.svg#wifi-off"/></svg>Czy potrzebuje internetu?</summary>
+        <p>Nie. Słowniki, podpowiedzi i uczenie działają na Twoim komputerze. Wodzik niczego nie wysyła i sam się nie aktualizuje: nową wersję pobierzesz ze strony.</p>
+      </details>
+      <details class="cap">
+        <summary><svg class="icon" aria-hidden="true"><use href="icons.svg#package"/></svg>Ile kosztuje i kiedy będzie do pobrania?</summary>
+        <p>Cena nie jest jeszcze ustalona. Przed zakupem będzie można wypróbować Wodzika w wersji próbnej. Jeśli chcesz testować wcześniej, napisz do mnie.</p>
       </details>
       <details class="cap">
         <summary><svg class="icon" aria-hidden="true"><use href="icons.svg#info"/></svg>Czego Wodzik nie potrafi?</summary>
@@ -552,7 +638,7 @@
 
 <footer class="foot-bar">
   <div class="wrap">
-    <a class="brand" href="#tresc"><img src="logo.svg" alt="" width="28" height="28">Wodzik 0.4</a>
+    <a class="brand" href="#tresc"><img src="logo.svg" alt="" width="28" height="28">Wodzik 0.7</a>
     <nav aria-label="Linki">
       <a href="#funkcje">Funkcje</a>
       <a href="#prywatnosc">Prywatność</a>

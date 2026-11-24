@@ -131,7 +131,7 @@ kbd { padding: 1px 6px; border-radius: 6px; background: var(--surface-3); color:
   border-radius: 0; background: var(--surface-2); box-shadow: 0 12px 24px var(--shadow); }
 .top.open .nav a { padding: 12px; font-size: 15px; }
 .top .btn-small { display: none; }
-@media (min-width: 560px) { .top .btn-small { display: inline-flex; } }
+@media (min-width: 560px) { .top .btn-small { display: inline-flex; } .nav .nav-contact { display: none; } }
 @media (min-width: 1080px) { .nav { display: flex; } .menu-btn { display: none; } }
 
 /* hero */

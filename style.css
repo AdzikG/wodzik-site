@@ -260,7 +260,7 @@ kbd { padding: 1px 6px; border-radius: 6px; background: var(--surface-3); color:
 .select-demo blockquote { margin: 0; font: 700 clamp(20px, 3vw, 26px)/1.5 var(--font-head); }
 .select-demo mark { padding: 2px 8px; border-radius: 8px; background: color-mix(in srgb, var(--teal) 40%, transparent); color: inherit; }
 .select-demo p { margin-top: 16px; font: 500 13px/1.5 var(--font-mono); color: var(--faint); }
-@media (max-width: 520px) { .bubble span:nth-child(3) { display: none; } }
+@media (max-width: 520px) { .bubble span:nth-child(2), .bubble span:nth-child(3) { display: none; } }
 
 /* code (always dark) */
 .dark { background: var(--navy); color: var(--navy-text); position: relative; overflow: hidden; }
